@@ -1,6 +1,6 @@
 package com.shimada.user.model;
 
-import com.shimada.application.core.BasicEntity;
+import com.shimada.application.core.model.BasicEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;

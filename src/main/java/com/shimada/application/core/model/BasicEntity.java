@@ -1,4 +1,4 @@
-package com.shimada.application.core;
+package com.shimada.application.core.model;
 
 /**
  * A basic entity of the system

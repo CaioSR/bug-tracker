@@ -2,7 +2,7 @@ package com.shimada.project.web;
 
 import org.springframework.stereotype.Service;
 
-import com.shimada.application.core.AbstractDtoTransform;
+import com.shimada.application.core.web.AbstractDtoTransform;
 import com.shimada.project.model.ProjectDto;
 import com.shimada.project.model.ProjectEntity;
 

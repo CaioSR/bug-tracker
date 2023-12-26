@@ -1,6 +1,6 @@
 package com.shimada.collaborator.model;
 
-import com.shimada.application.core.BasicEntity;
+import com.shimada.application.core.model.BasicEntity;
 import com.shimada.project.model.ProjectEntity;
 import com.shimada.user.model.UserEntity;
 

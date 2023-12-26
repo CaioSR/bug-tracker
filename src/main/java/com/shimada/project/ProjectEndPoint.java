@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shimada.application.Application;
-import com.shimada.application.core.AbstractDtoTransform;
-import com.shimada.application.core.AbstractEndPoint;
-import com.shimada.application.core.AbstractStorage;
+import com.shimada.application.core.dao.AbstractStorage;
+import com.shimada.application.core.web.AbstractDtoTransform;
+import com.shimada.application.core.web.AbstractEndPoint;
 import com.shimada.project.dao.ProjectStorage;
 import com.shimada.project.model.ProjectDto;
 import com.shimada.project.model.ProjectEntity;

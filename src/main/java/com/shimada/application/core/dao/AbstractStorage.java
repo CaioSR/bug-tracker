@@ -1,8 +1,9 @@
-package com.shimada.application.core;
+package com.shimada.application.core.dao;
 
 import org.hibernate.Session;
 
 import com.shimada.application.configuration.HibernateConnector;
+import com.shimada.application.core.model.BasicEntity;
 
 /**
  * Abstract storage service for storing and retrieving data
@@ -15,6 +16,7 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 	
 	/**
 	 * Retrieves the Hibernate Session
+	 * 
 	 * @return
 	 */
 	protected Session getSession() {
@@ -26,12 +28,14 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 	
 	/**
 	 * Gets the Type of the class being managed
+	 * 
 	 * @return
 	 */
 	protected abstract Class<T> getType();
 	
 	/**
 	 * Finds an entity in the database by its Id
+	 * 
 	 * @param id
 	 * @return
 	 * @throws Exception
@@ -46,7 +50,6 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 			
 			session.close();
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 		
@@ -55,6 +58,7 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 	
 	/**
 	 * Saves an entity in the database
+	 * 
 	 * @param entity
 	 * @return
 	 * @throws Exception
@@ -73,7 +77,6 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 			
 			session.close();
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 		
@@ -82,11 +85,11 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 	
 	/**
 	 * Deletes an entity from the database
+	 * 
 	 * @param entity
-	 * @return
 	 * @throws Exception
 	 */
-	public T delete(T entity) throws Exception {
+	public void delete(T entity) throws Exception {
 		try {
 			// validate(entity);
 			
@@ -100,32 +103,25 @@ public abstract class AbstractStorage<T extends BasicEntity> {
 			
 			session.close();
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
-		return entity;
 	}
 	
 	/**
 	 * Deletes an entity from the database identifying it by its Id
+	 * 
 	 * @param id
 	 * @return
 	 * @throws Exception
 	 */
-	public T delete(Long id) throws Exception {
-		T entity = null;
-		
+	public void delete(Long id) throws Exception {
 		try {
-			entity = find(id);
+			T entity = find(id);
 			
 			delete(entity);
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
-		
-		return entity;
 	}
 	
 }

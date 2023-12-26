@@ -1,6 +1,6 @@
 package com.shimada.attachment.model;
 
-import com.shimada.application.core.BasicEntity;
+import com.shimada.application.core.model.BasicEntity;
 
 /**
  * An attachment of a ticket

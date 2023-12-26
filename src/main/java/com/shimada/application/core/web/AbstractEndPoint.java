@@ -1,4 +1,4 @@
-package com.shimada.application.core;
+package com.shimada.application.core.web;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -6,6 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import com.shimada.application.core.dao.AbstractStorage;
+import com.shimada.application.core.model.BasicDto;
+import com.shimada.application.core.model.BasicEntity;
 
 /**
  * Abstract end point for handling requests
@@ -19,18 +23,21 @@ public abstract class AbstractEndPoint<E extends BasicEntity, D extends BasicDto
 	
 	/**
 	 * Returns the entity - dto transformer
+	 * 
 	 * @return
 	 */
 	protected abstract AbstractDtoTransform<E, D> getTransform();
 	
 	/**
 	 * Returns the entity storage
+	 * 
 	 * @return
 	 */
 	protected abstract AbstractStorage<E> getStorage();
 	
 	/**
 	 * Customize the dto before transforming into entity
+	 * 
 	 * @param dto
 	 */
 	protected void customizeDto(D dto) {
@@ -39,6 +46,7 @@ public abstract class AbstractEndPoint<E extends BasicEntity, D extends BasicDto
 	
 	/**
 	 * Customize the entity after transforming before saving
+	 * 
 	 * @param entity
 	 */
 	protected void customizeEntity(E entity) {
@@ -47,6 +55,7 @@ public abstract class AbstractEndPoint<E extends BasicEntity, D extends BasicDto
 	
 	/**
 	 * Saves the DTO into the database
+	 * 
 	 * @param dto
 	 * @return {@link ResponseEntity}
 	 */
@@ -70,6 +79,7 @@ public abstract class AbstractEndPoint<E extends BasicEntity, D extends BasicDto
 	
 	/**
 	 * Retrieves a object from the database by its Id
+	 * 
 	 * @param id
 	 * @return {@link ResponseEntity}
 	 */

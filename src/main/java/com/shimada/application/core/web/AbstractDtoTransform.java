@@ -1,4 +1,7 @@
-package com.shimada.application.core;
+package com.shimada.application.core.web;
+
+import com.shimada.application.core.model.BasicDto;
+import com.shimada.application.core.model.BasicEntity;
 
 /**
  * A base abstract transformer from entity to dto and vice-versa
@@ -9,6 +12,7 @@ public abstract class AbstractDtoTransform<E extends BasicEntity, D extends Basi
 
 	/**
 	 * Converts the values from entity to dto
+	 * 
 	 * @param dto
 	 * @param entity
 	 */
@@ -16,6 +20,7 @@ public abstract class AbstractDtoTransform<E extends BasicEntity, D extends Basi
 	
 	/**
 	 * Converts the values from dto to entity
+	 * 
 	 * @param entity
 	 * @param dto
 	 */
@@ -23,18 +28,21 @@ public abstract class AbstractDtoTransform<E extends BasicEntity, D extends Basi
 	
 	/**
 	 * Instantiates a new dto
+	 * 
 	 * @return
 	 */
 	protected abstract D newDTO();
 	
 	/**
 	 * Instantiates a new entity
+	 * 
 	 * @return
 	 */
 	protected abstract E newEntity();
 	
 	/**
 	 * Basic process to transform a dto to entity
+	 * 
 	 * @param entity
 	 * @return
 	 */
@@ -47,6 +55,7 @@ public abstract class AbstractDtoTransform<E extends BasicEntity, D extends Basi
 	
 	/**
 	 * Basic process to transform an entity to dto
+	 * 
 	 * @param dto
 	 * @return
 	 */

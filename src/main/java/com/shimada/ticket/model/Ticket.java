@@ -2,7 +2,7 @@ package com.shimada.ticket.model;
 
 import java.util.Date;
 
-import com.shimada.application.core.BasicEntity;
+import com.shimada.application.core.model.BasicEntity;
 import com.shimada.collaborator.model.CollaboratorEntity;
 import com.shimada.project.model.ProjectEntity;
 

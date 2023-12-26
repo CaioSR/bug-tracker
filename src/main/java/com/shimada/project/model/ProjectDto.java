@@ -1,6 +1,6 @@
 package com.shimada.project.model;
 
-import com.shimada.application.core.BasicDto;
+import com.shimada.application.core.model.BasicDto;
 import com.shimada.util.defaultEntityDisplay.DefaultModelDisplayFormat;
 import com.shimada.util.defaultEntityDisplay.DefaultModelDisplayProvider;
 

@@ -1,6 +1,6 @@
 package com.shimada.comment.model;
 
-import com.shimada.application.core.BasicEntity;
+import com.shimada.application.core.model.BasicEntity;
 
 /**
  * Comment of a ticket

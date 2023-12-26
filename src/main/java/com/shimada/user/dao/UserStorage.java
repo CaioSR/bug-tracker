@@ -2,7 +2,7 @@ package com.shimada.user.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.shimada.application.core.AbstractStorage;
+import com.shimada.application.core.dao.AbstractStorage;
 import com.shimada.user.model.UserEntity;
 
 /**
